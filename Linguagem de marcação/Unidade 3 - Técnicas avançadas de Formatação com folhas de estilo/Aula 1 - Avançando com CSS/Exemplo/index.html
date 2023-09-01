@@ -1,0 +1,175 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS AVANÇADO - KROTON</title>
+  </head>
+
+  <body>
+    <header id="header">
+      <nav id="navbar">
+        <ul>
+          <li><a href="#welcome-section" class="nav-link">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projetos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- SEÇÃO DE INFORMAÇÕES/TÍTULO -->
+    <div id="welcome-section">
+      <div class="main-wrapper">
+        <h1>Seu nome aqui</h1>
+        <h4>Estudante</h4>
+      </div>
+
+      <div class="sliders">
+        <h1>Modificando Range Slider</h1>
+        <div class="slidecontainer">
+          <p>Range slider no estilo padrão:</p>
+          <input type="range" min="1" max="100" value="50" />
+
+          <p>Range slider customizado:</p>
+          <input type="range" min="1" max="100" value="50" class="slider" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+  }
+
+  #header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 85px;
+    position: fixed;
+    top: 0;
+  }
+
+  #header ul {
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    right: 0;
+  }
+
+  #header ul li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  #header ul li a {
+    display: block;
+    height: 45px;
+    font-size: 20px;
+    background: #fff;
+    width: 125px;
+    color: #262626;
+    margin: 4px 0;
+    line-height: 45px;
+    text-decoration: none;
+  }
+  #header ul li a:hover {
+    background: tomato;
+    text-decoration: none;
+    color: #fff;
+  }
+  #welcome-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: lightslategray;
+    row-gap: 20px;
+  }
+
+  #welcome-section .main-wrapper {
+    height: calc(50vh - 85px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #welcome-section .main-wrapper h1 {
+    margin: 0px auto;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+  }
+
+  #welcome-section .main-wrapper h4 {
+    margin: 0px auto;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+  }
+
+  .sliders h1 {
+    margin: 0px auto;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    color: white;
+  }
+
+  .slidecontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slidecontainer p {
+    margin: 5px 0px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04aa6d;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04aa6d;
+    cursor: pointer;
+  }
+
+  @media (max-width: 400px) {
+    #welcome-section,
+    #projects {
+      height: auto;
+    }
+  }
+</style>
